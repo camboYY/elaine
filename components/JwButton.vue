@@ -1,8 +1,12 @@
 <template>
-  <button class="jwbtn" :class="{'disabled': disabled, 'fullwidth': fullWidth, 'round': round}" :disabled="loading || disabled">
+  <button
+    class="jwbtn"
+    :class="{ disabled: disabled, fullwidth: fullWidth, round: round }"
+    :disabled="loading || disabled"
+  >
     <loader v-if="loading" />
     <div v-else>
-      <v-icon v-if="icon">{{icon}}</v-icon>
+      <v-icon v-if="icon">{{ icon }}</v-icon>
       <slot></slot>
     </div>
   </button>
@@ -13,7 +17,7 @@
 
 <script>
 export default {
-  name: "JwButton",
+  name: 'JwButton',
   props: {
     icon: String,
     loading: Boolean,
@@ -151,6 +155,17 @@ export default {
   i {
     color: $color-green;
   }
+}
+
+.jwbtn-pink {
+  background-color: $color-pink-7 !important;
+  -webkit-box-shadow: 0 0 0 1px $color-pink-7 inset;
+  box-shadow: 0 0 0 1px $color-pink-7 inset;
+}
+
+.jwbtn-pink:hover {
+  background-color: transparent !important;
+  color $color-text-pink-1;
 }
 </style>
 

@@ -21,7 +21,8 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.0.96/css/materialdesignicons.css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Material+Icons' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Quicksand&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Quicksand&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dancing+Script' }
     ]
   },
   /*
@@ -41,7 +42,8 @@ module.exports = {
     { src: '~plugins/vue-fb-customer-chat.js', ssr: false },
     { src: '~plugins/vue-core-image-upload.js', ssr: false },
     { src: '~plugins/set-locale-onload', mode: 'client' },
-    { src: '~plugins/jw-core-components', mode: 'client' }
+    { src: '~plugins/jw-core-components', mode: 'client' },
+    { src: '~plugins/swipper-slide', mode: 'client'}
   ],
   /*
   ** Nuxt.js dev-modules

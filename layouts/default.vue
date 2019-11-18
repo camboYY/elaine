@@ -1,5 +1,5 @@
 <template>
-  <v-app >
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -7,7 +7,7 @@
       fixed
       app
     >
-      <v-list>
+      <!-- <v-list>
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -22,22 +22,21 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
-      </v-list>
+      </v-list> -->
     </v-navigation-drawer>
     <v-app-bar
       :clipped-left="clipped"
       fixed
       app
       flat
-      max-height="500"
+      max-height="300px"
       color="#fff"
     >
       <v-app-bar-nav-icon color="black" @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon color="black">mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+      <v-btn icon @click.stop="miniVariant = !miniVariant">
+        <v-icon color="black"
+          >mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon
+        >
       </v-btn>
       <div class="image-wrapper">
         <img src="~/assets/img/logo.png" />
@@ -45,53 +44,42 @@
     </v-app-bar>
     <v-content>
       <carousel />
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-   
-      <span>&copy; 2019</span>
+    <v-footer :fixed="fixed" app class="font-weight-medium">
+      <v-layout justify-center>
+        <primary-footer />
+      </v-layout>
+      <!-- <span>&copy; 2019</span> -->
     </v-footer>
   </v-app>
 </template>
 
 <script>
 import carousel from '~/components/carousel/index.vue'
+import primaryFooter from '~/components/footer/primaryFooter.vue'
 
 export default {
-  data () {
+  data() {
     return {
       clipped: false,
       drawer: false,
       fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
     }
   },
-  mounted () {
+  mounted() {
     this.$fbCustomerChat
   },
   components: {
     carousel,
-  },
+    primaryFooter
+  }
 }
 </script>
 <style lang="stylus">
@@ -99,6 +87,14 @@ export default {
 
 .v-application {
   font-family: $body-font-family;
+}
+
+.theme--light.v-footer {
+  background-color: $color-white-light;
+
+  .footer-fixed {
+    overflow: hidden;
+  }
 }
 
 .v-toolbar__content .image-wrapper {
