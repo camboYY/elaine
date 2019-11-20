@@ -19,7 +19,7 @@
           v-for="product in products"
           v-bind:key="product.id"
           :dataSrc="product"
-          class="xsmall-1 small-2 medium-4 large-4 xlarge-4"
+          class="col-12 col-md-4 col-lg-3 col-xlg-3"
         />
       </v-layout>
     </v-container>

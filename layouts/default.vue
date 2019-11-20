@@ -41,6 +41,11 @@
       <div class="image-wrapper">
         <img src="~/assets/img/logo.png" />
       </div>
+      <div class="signup-login">
+        <jw-button class="btn jwbtn round jwbtn-pink">login </jw-button>
+        <jw-button class="btn jwbtn round jwbtn-pink">Register </jw-button>
+      </div>
+      <lang />
     </v-app-bar>
     <v-content>
       <carousel />
@@ -60,6 +65,7 @@
 <script>
 import carousel from '~/components/carousel/index.vue'
 import primaryFooter from '~/components/footer/primaryFooter.vue'
+import lang from '~/components/language/lang.vue'
 
 export default {
   data() {
@@ -78,7 +84,8 @@ export default {
   },
   components: {
     carousel,
-    primaryFooter
+    primaryFooter,
+    lang
   }
 }
 </script>
@@ -114,6 +121,14 @@ export default {
     &:hover {
       color: $color-text-pink-1;
     }
+  }
+}
+.signup-login {
+  display flex;
+  justify-content flex-end
+  width 100%
+  button {
+    width 15%
   }
 }
 </style>
