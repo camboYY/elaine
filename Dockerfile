@@ -17,8 +17,7 @@ ENV NUXT_PORT 3000
 COPY . /usr/src/app
 RUN npm run build
 
-# Clear the cache
-RUN npm cache clean
+
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
