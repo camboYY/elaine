@@ -42,7 +42,7 @@ module.exports = {
     { src: '~plugins/vue-fb-customer-chat.js', ssr: false },
     { src: '~plugins/vue-core-image-upload.js', ssr: false },
     { src: '~plugins/set-locale-onload', mode: 'client' },
-    { src: '~plugins/jw-core-components', mode: 'client' },
+    /*{ src: '~plugins/jw-core-components', mode: 'client' },*/
     { src: '~plugins/swipper-slide', mode: 'client'}
   ],
   /*
