@@ -90,7 +90,7 @@ export default {
 }
 </script>
 <style lang="stylus">
-@import '~assets/variables.styl';
+
 
 .v-application {
   font-family: $body-font-family;

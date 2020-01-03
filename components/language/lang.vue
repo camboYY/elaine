@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <style lang="stylus">
-@import '~assets/variables.styl';
+
 .language {
     .v-btn {
       span img {
