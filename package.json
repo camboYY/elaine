@@ -18,7 +18,7 @@
     "core-util-is": "^1.0.2",
     "cross-env": "^5.2.0",
     "fastify": "^1.13.3",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "nuxt-i18n": "^5.2.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
